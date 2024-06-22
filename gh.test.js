@@ -42,7 +42,7 @@ test ("The topics title", async () => {
   });
   const actual = await page.$eval(titleTopics, link => link.textContent);
   expect(actual).toEqual('Browse popular topics on GitHub.');
-  page.close();
+  // page.close();
 }, 5000);
 
 describe("Github/topics/angular page tests", () => {
@@ -52,7 +52,7 @@ describe("Github/topics/angular page tests", () => {
   });
 
   afterEach(() => {
-    page.close();
+    // page.close();
   });
   test ("The angular selector", async () => {
     const selectorAngular = await page.$("button[aria-label='Star this topic'] span[class='d-inline']", (link) => link.textContent);
