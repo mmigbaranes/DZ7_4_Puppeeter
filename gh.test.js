@@ -34,7 +34,7 @@ describe("Github page TEAM tests", () => {
 });
 
 test ("The topics title", async () => {
-  page = await browser.newPage();
+  // page = await browser.newPage();
   await page.goto("https://github.com/topics");
   const titleTopics = '.f4.color-fg-muted.col-md-6.mx-auto';
   await page.waitForSelector(titleTopics, {
@@ -51,9 +51,9 @@ describe("Github/topics/angular page tests", () => {
     await page.goto("https://github.com/topics/angular");
   });
 
-  afterEach(() => {
-    // page.close();
-  });
+  // afterEach(() => {
+  //   page.close();
+  // });
   test ("The angular selector", async () => {
     const selectorAngular = await page.$("button[aria-label='Star this topic'] span[class='d-inline']", (link) => link.textContent);
     expect(selectorAngular).toEqual(null);
